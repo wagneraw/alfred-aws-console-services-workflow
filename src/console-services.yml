@@ -2,6 +2,10 @@
 - command: acm
   description: 'Certificate Manager - Provision, Manage, and Deploy SSL/TLS Certificates'
   url: 'https://console.aws.amazon.com/acm/home'
+  subpages:
+    - command: request
+      description: 'Request a certificate'
+      url: 'https://console.aws.amazon.com/acm/home#/wizard'
 
 - command: apigateway
   description: 'API Gateway - Build, Deploy and Manage APIs'
@@ -86,6 +90,77 @@
 - command: ec2
   description: 'EC2 - Virtual Servers in the Cloud'
   url: 'https://console.aws.amazon.com/ec2/home'
+  subpages:
+    - command: events
+      description: 'Events'
+      url: 'https://console.aws.amazon.com/ec2/home#Events:'
+    - command: limits
+      description: 'Service limits'
+      url: 'https://console.aws.amazon.com/ec2/home#Limits:'
+    - command: tags
+      description: 'Manage tags'
+      url: 'https://console.aws.amazon.com/ec2/home#Tags:'
+    - command: reports
+      description: 'Usage reports'
+      url: 'https://console.aws.amazon.com/ec2/home#Reports:'
+    - command: instances
+      description: 'View all instances'
+      url: 'https://console.aws.amazon.com/ec2/home#Instances:'
+    - command: spot
+      description: 'View spot requests'
+      url: 'https://console.aws.amazon.com/ec2sp'
+    - command: reserved
+      description: 'View reserved instances'
+      url: 'https://console.aws.amazon.com/ec2/home#ReservedInstances:'
+    - command: scheduled
+      description: 'View scheduled instances'
+      url: 'https://console.aws.amazon.com/ec2sp/v1/si/home'
+    - command: hosts
+      description: 'View dedicated hosts'
+      url: 'https://console.aws.amazon.com/ec2/home#Hosts:'
+    - command: images
+      description: 'View AMIs'
+      url: 'https://console.aws.amazon.com/ec2/home#Images:'
+    - command: bundletasks
+      description: 'View bundle tasks'
+      url: 'https://console.aws.amazon.com/ec2/home#BundleTasks:'
+    - command: ebs
+      description: 'View Elastic Block Stores'
+      url: 'https://console.aws.amazon.com/ec2/home#Volumes:'
+      subpages:
+        - command: volumes
+          description: 'View EBS volumes'
+          url: 'https://console.aws.amazon.com/ec2/home#Volumes:'
+        - command: snapshots
+          description: 'View EBS snapshots'
+          url: 'https://console.aws.amazon.com/ec2/home#Snapshots:'
+    - command: securitygroups
+      description: 'View security groups'
+      url: 'https://console.aws.amazon.com/ec2/home#SecurityGroups:'
+    - command: elasticips
+      description: 'View Elastic IP addresses'
+      url: 'https://console.aws.amazon.com/ec2/home#Addresses:'
+    - command: placementgroups
+      description: 'View placement groups'
+      url: 'https://console.aws.amazon.com/ec2/home#PlacementGroups:'
+    - command: keypairs
+      description: 'View security key pairs'
+      url: 'https://console.aws.amazon.com/ec2/home#KeyPairs:'
+    - command: networkinterfaces
+      description: 'View network interfaces'
+      url: 'https://console.aws.amazon.com/ec2/home#NIC:'
+    - command: loadbalancers
+      description: 'View load balancers'
+      url: 'https://console.aws.amazon.com/ec2/home#LoadBalancers:'
+    - command: targetgroups
+      description: 'View target groups'
+      url: 'https://console.aws.amazon.com/ec2/home#TargetGroups:'
+    - command: launchconfigs
+      description: 'View launch configurations'
+      url: 'https://console.aws.amazon.com/ec2/home#LaunchConfigurations:'
+    - command: asg
+      description: 'View Auto-Scaling Groups (ASGs)'
+      url: 'https://console.aws.amazon.com/ec2/home#AutoScalingGroups:'
 
 - command: ecs
   description: 'EC2 Container Service - Run and Manage Docker Containers'

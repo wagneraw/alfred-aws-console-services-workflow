@@ -5,18 +5,35 @@ const consoleServices = YAML.load('console-services.yml');
 const listItems = generate(consoleServices);
 injectIntoXml(listItems);
 
-function generate(consoleServices) {
-  return consoleServices.map(({command, description, icon, url}) => {
-    console.log(command);
+function generate(consoleServices, ...parentCommands) {
+  if (!consoleServices) {
+    return [];
+  }
 
-    const consoleService = {
-      title: command,
-      arg: url,
-      subtitle: description,
-      imagefile: icon || `${command}.png`,
-    };
+  const flatMap = require('lodash.flatmap');
+  return flatMap(consoleServices, ({command, description, icon, url, subpages}) => {
 
-    return consoleService;
+    const consoleService = (() => {
+      if (parentCommands.length) {
+        const rootCommand = parentCommands[0];
+        return {
+          title: `${parentCommands.join(' ')} ${command}`,
+          arg: url,
+          subtitle: `${parentCommands.join(' ')} - ${description}`,
+          imagefile: icon || `${rootCommand}.png`,
+        }
+      }
+
+      return {
+        title: command,
+        arg: url,
+        subtitle: description,
+        imagefile: icon || `${command}.png`,
+      }
+    })();
+
+    console.log(consoleService.title);
+    return [consoleService, ...generate(subpages, ...parentCommands, command)];
   });
 }
 
