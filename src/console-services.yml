@@ -215,6 +215,10 @@
   description: 'EMR - Managed Hadoop Framework'
   url: 'https://console.aws.amazon.com/emr/home'
 
+- command: eventbridge
+  description: 'EventBridge - Connect SaaS & AWS apps with events'
+  url: 'https://console.aws.amazon.com/events/home'
+
 - command: forecast
   description: 'Forecast - fully-managed service for accurate time-series forecasting'
   url: 'https://console.aws.amazon.com/forecast/home'
